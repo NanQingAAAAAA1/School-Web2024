@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition Demo 01</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .button01 {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: all;
+        }
+
+        .button01:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button class="button01">Click Me！</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+}
+
+#bg {
+    width:1200px;
+    height: 617px;
+    background-image: url("img/bg.png");
+    margin: 0 auto;
+}
+/* 导航样式 */
+nav {
+    text-align: center;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    margin-top: 0px;
+}
+
+ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #796847;
+}
+
+/* 鼠标悬停效果 */
+ul li a:hover {
+    background-color: #FED23D;
+}
+
+/* 下拉菜单样式 */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #EDF2F3;
+    z-index: 1;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    padding: 10px;
+    text-align: center;
+}
+
+/* 下拉菜单项悬停效果 */
+.dropdown li a:hover {
+    background-color: #FED23D;
+}
+
+/* 显示下拉菜单 */
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+/* 搜索框样式 */
+span{
+    color:#685649;
+    font-size:10px;
+    padding: 0 5px;
+    margin-top: 30px;/*设置搜索框居中*/
+}
+span.search{
+    float:right;
+    width:200px;
+    height:30px;
+    line-height:30px;
+    border-radius: 100px;
+    color:#aaa;
+    font-size:14px;
+    background:#fff url(img/f.png) no-repeat 10px center;
+    margin-top: 30px;/*设置搜索框居中*/
+}
+
+#tuijian {
+    display: flex; /* 使用 Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 使新闻部分的三个盒子水平居中排列 */
+#news {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 30px; /* 增加盒子间距，可根据需要调整 */
+    margin-top: 20px; /* 为新闻部分添加顶部间距 */
+}
+
+.news-info {
+    background-color: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+/* 图片样式，适应容器大小 */
+.news-info img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover; /* 确保图片不会变形 */
+}
+
+/* 新增的容器，用于包含标题和内容 */
+.news-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; /* 垂直排列标题和内容 */
+    justify-content: center; /* 垂直居中 */
+    align-items: left;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    overflow: hidden;
+    opacity: 0; /* 默认透明 */
+    transition: opacity 0.5s ease; /* 过渡效果 */
+}
+
+/* 鼠标悬停时显示内容 */
+.news-info:hover .news-overlay {
+    opacity: 1; /* 鼠标悬停时显示遮罩层 */
+    transform: scale(1.1); /* 鼠标悬停时放大1.1倍 */
+    transition: transform 0.5s ease; /* 过渡效果 */
+}
+
+.news-info:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大1.1倍 */
+    transition: transform 0.5s ease; /* 过渡效果 */
+}
+
+.news-title, .news-content{
+    padding: 15px;
+}
+
+/* 标题和内容的个性化样式 */
+.news-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* 添加横线分隔 */
+    padding-bottom: 5px; /* 给标题和横线之间留空隙 */
+    display: flex;
+    justify-content: flex-start;/* 使用的是Flexbox布局，
+    使用justify-content属性来控制项目在主轴上的对齐方式*/
+}
+
+.news-content {
+    font-size: 1em;
+    color: #ddd; /* 调暗颜色 */
+    margin: 10px;
+}
+
+#shenghuo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    background-image: radial-gradient(ellipse at center, #fff, #d6e4ed);
+    height: 500px; /* 减小高度 */
+}
+
+.img {
+    padding: 0;
+    margin: 50px auto;
+}
+
+.img img {
+    vertical-align: middle;
+    margin-left: 60px;
+}
+
+#footer{
+    width:1200px;
+    height:80px;
+    background:url(img/footer_bg.jpg);
+    color:#fff;
+    text-align:center;
+    line-height:80px;
+    margin:0 auto;
+}
+
+/* 修改二维码盒子样式，使其悬浮 */
+#erweima {
+    position: fixed; /* 使用 fixed 定位，使其始终浮动在屏幕右上角 */
+    top: 500px;
+    right: 20px;
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    display: block; /* 默认显示二维码 */
+    animation: slideAndRotate 5s infinite alternate; /* 调用动画 */
+    animation-duration: 5s; /* 每次动画时长5秒 */
+    animation-iteration-count: 10; /* 循环10次 */
+    animation-direction: alternate; /* 偶数次正向播放，奇数次反向播放 */
+}
+
+/* 定义二维码的旋转和左右晃动的关键帧 */
+@keyframes slideAndRotate {
+    0% {
+        transform: translateX(0) rotate(0deg); /* 初始状态，图片不动且不旋转 */
+    }
+    25% {
+        transform: translateX(20px) rotate(30deg); /* 向右移动并顺时针旋转30度 */
+    }
+    50% {
+        transform: translateX(0) rotate(-30deg); /* 向左返回并逆时针旋转30度 */
+    }
+    75% {
+        transform: translateX(-20px) rotate(30deg); /* 向左移动并顺时针旋转30度 */
+    }
+    100% {
+        transform: translateX(0) rotate(-30deg); /* 向右返回并逆时针旋转30度 */
+    }
+}
+
+/* 隐藏复选框 */
+#toggle-erweima {
+    display: none;
+}
+
+/* 二维码的图片部分 */
+.slider {
+    width: 100%;height: 100%;overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 关闭按钮样式 */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #fff;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+}
+
+/* 鼠标悬停在关闭按钮上改变颜色 */
+.close-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 当复选框选中时隐藏二维码 */
+#toggle-erweima:checked + .slider {
+    display: none;
+}

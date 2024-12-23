@@ -1,0 +1,130 @@
+<!-- 239971344 张良超 -->
+<!DOCTYPE html>  
+<html>  
+<head>  
+	<meta charset="utf-8" />  
+	<title>学生信息注册</title>  
+	<style>  
+		.inline-elements p, 
+		.inline-elements input, 
+		.inline-elements label, 
+		.inline-elements button, 
+		.inline-elements select {  
+			display: inline-block;  
+			margin-right: 10px;
+			text-align: center;
+		}  
+		.button {  
+			text-align: center;
+		}
+		  body{
+		            background-image: url("img/bg.png");
+		            background-repeat: no-repeat;
+		            background-size: cover;
+		            text-align:center;
+		        }
+		table {  
+		    margin: 0 auto;  
+		    max-width: 80%;
+		    border-collapse: collapse;
+		}  
+		td {  
+		    padding: 10px;
+		}
+	</style>  
+</head>  
+<body>  
+	<div class="reg">  
+		<h2>学生信息注册</h2>  
+		<hr size="2" color="#d1d1d1" width="980px">  
+		<p><span style="color:#FF0000"><strong>请注意:带*号的项目必须填写</strong></span></p>  
+	</div>  
+	<form>  
+		<table>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>昵称：*</p>  
+					<input class="input" type="text" name="username" required placeholder="请输入用户名">  
+					<span class="description">(6~18个字符，由字母，数字或者下画线构成)</span>  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>手机：*</p>  
+					<input class="input" type="tel" name="phone" required placeholder="请输入电话号码">  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>姓名：*</p>  
+					<input class="input" type="text" name="uname" required placeholder="请输入姓名">  
+				</td>  
+			</tr>  
+			<tr>  
+				<td class="inline-elements">  
+					<p>性别：</p>  
+					<label><input type="radio" name="sex" value="男" checked>男</label>  
+					<label><input type="radio" name="sex" value="女">女</label>  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>年龄：</p>  
+					<input class="input" type="number" min="18" max="100">  
+					<button type="button" onclick="alert('Submit function not implemented')">提交</button>  
+					<span class="description">(年龄介于18~100岁)</span>  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">
+				<td>  
+					<p>出生日期：</p>  
+					<input class="input" type="date" name="time">  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>电子邮箱：</p>  
+					<input class="input" type="text" name="user_email" required placeholder="请输入电子邮箱">  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>身份证号：*</p>  
+					<input class="input" type="text" name="id_number" required placeholder="请输入身份证号">  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>籍贯：</p>  
+					<select name="city" class="input" required>  
+						<option value="">请选择</option>  
+						<option value="CQ">重庆市</option>  
+					</select>  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>爱好：</p>  
+					<label><input type="checkbox" name="like" value="音乐">音乐</label>  
+					<label><input type="checkbox" name="like" value="上网">上网</label>  
+					<label><input type="checkbox" name="like" value="看电影">看电影</label>  
+					<label><input type="checkbox" name="like" value="下棋">下棋</label>  
+				</td>  
+			</tr>  
+			<tr class="inline-elements">  
+				<td>  
+					<p>喜欢的颜色：</p>  
+					<input type="color" name="user_color">  
+					<span class="description">（请选择你喜欢的颜色）</span>  
+				</td>  
+			</tr>  
+			<tr>  
+				<td class="button">  
+					<button type="submit" onclick="alert('Submit function not implemented')">确定</button>  
+					<button type="reset">重置</button>  
+				</td>  
+			</tr>  
+		</table>  
+	</form>  
+</body>  
+</html>
