@@ -1,0 +1,57 @@
+/* 全局样式 */  
+body {  
+    background-color: #ededed;  
+    font-family: "微软雅黑", sans-serif;  
+    font-size: 16px;  
+    color: #a5a5a5;  
+    margin: 0;  
+    padding: 0;  
+}  
+  
+/* 页头样式 */  
+.header {  
+    width: 980px;  
+    margin: auto;  
+    text-align: center;
+	text-shadow: 10px 10px 1px #c7c7c7;
+	font-family: "方正剪纸简体";
+    padding: 20px 0;  
+}  
+  
+/* 分类样式 */  
+.product-categories {  
+    width: 980px;  
+    margin: 20px auto;  
+    text-align: center;
+}  
+  
+/* 热卖模块样式 */  
+.top-sellers {  
+    width: 602px;  
+    margin: 20px auto;  
+    text-align: left;
+}  
+  
+.top-sellers p {  
+    line-height: 30px;  
+    text-indent: 2em;  
+}  
+  
+/* 页尾样式 */  
+.shouhou, .boss {  
+    width: 602px;  
+    margin: 20px auto;  
+    text-align: center;  
+}  
+  
+.boss h3 {  
+    font-size: 18px;  
+    margin-bottom: 10px;  
+}  
+  
+.boss p {  
+    font-style: italic;  
+    line-height: 26px;  
+    font-size: 14px;  
+    text-indent: 0; /* 移除缩进 */  
+}

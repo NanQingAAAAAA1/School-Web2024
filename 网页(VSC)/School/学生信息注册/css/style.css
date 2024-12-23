@@ -1,0 +1,26 @@
+.inline-elements p, 
+.inline-elements input, 
+.inline-elements label, 
+.inline-elements button, 
+.inline-elements select {  
+    display: inline-block;  
+    margin-right: 10px;  
+    text-align: center;  
+}  
+.button {  
+    text-align: center;  
+}  
+body {  
+    background-image: url("img/bg.png");  
+    background-repeat: no-repeat;  
+    background-size: cover;  
+    text-align: center;  
+}  
+table {  
+    margin: 0 auto;  
+    max-width: 80%;  
+    border-collapse: collapse;  
+}  
+td {  
+    padding: 10px;  
+}

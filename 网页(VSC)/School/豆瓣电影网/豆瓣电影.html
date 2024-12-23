@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影推荐列表</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+ 
+.container {
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+ 
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+ 
+.movie-item {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc((100% - 100px) / 5);
+    box-sizing: border-box;
+    position: relative; /* 添加这个属性 */
+}
+ 
+.movie-title {
+    width: 100%;
+    height: 400px; /* 可以根据需要调整高度 */
+    overflow: hidden;
+    position: relative; /* 确保图片是相对于这个容器定位的 */
+}
+ 
+.movie-title img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+ 
+.movie-info {
+    position: absolute; /* 使用绝对定位 */
+    top: 0; /* 顶部对齐 */
+    left: 0; /* 左对齐 */
+    right: 0; /* 右对齐 */
+    bottom: 0; /* 底部对齐 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    text-align: center; /* 文字居中 */
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white; /* 白色文字 */
+    padding: 10px; /* 内边距 */
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 0.3s ease; /* 过渡效果 */
+}
+ 
+.movie-item:hover .movie-info {
+    opacity: 1; /* 鼠标悬停时显示文字 */
+}
+ 
+.movie-content1 {
+    font-size: 0.9em;
+    color: #ddd; /* 稍微调暗一些 */
+    margin-bottom: 5px;
+}
+ 
+.movie-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+ 
+.movie-rating {
+    font-size: 1em;
+    color: #ffcc00; /* 更改评分颜色 */
+}
+ 
+@media (max-width: 768px) {
+    .movie-item {
+        width: calc(50% - 40px);
+    }
+}
+ 
+@media (max-width: 480px) {
+    .movie-item {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="movie-list">
+            <!-- 现有的电影项 -->
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/01.jpg" alt="电影海报"></div>
+                <div class="movie-info">
+                    <div class="movie-content1">更新至10集</div>
+                    <div class="movie-name">电影1</div>
+                    <div class="movie-rating">7.5</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/02.jpg" alt="电影海报"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至9集</div>
+                    <div class="movie-name">电影2</div>
+                    <div class="movie-rating">6.4</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/03.jpg" alt="电影海报"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至8集</div>
+                    <div class="movie-name">电影3</div>
+                    <div class="movie-rating">暂无评分</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/04.jpg" alt="电影海报2"></div>
+                <div class="movie-info">
+                    <div class="movie-content1">更新至7集</div>
+                    <div class="movie-name">电影4</div>
+                    <div class="movie-rating">8.2</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/05.jpg" alt="电影海报3"></div>
+                <div class="movie-info">
+                    <div class="movie-content1">更新至6集</div>
+                    <div class="movie-name">电影5</div>
+                    <div class="movie-rating">7.9</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/06.jpg" alt="电影海报4"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至5集</div>
+                    <div class="movie-name">电影6</div>
+                    <div class="movie-rating">9.1</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/07.jpg" alt="电影海报4"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至4集</div>
+                    <div class="movie-name">电影7</div>
+                    <div class="movie-rating">9.1</div>
+                </div>
+            </div>
+            <div class="movie-item">
+                <div class="movie-title"><img src="img/08.jpg" alt="电影海报4"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至3集</div>
+                    <div class="movie-name">电影8</div>
+                    <div class="movie-rating">9.1</div>
+                </div>
+            </div>
+			<div class="movie-item">
+                <div class="movie-title"><img src="img/09.jpg" alt="电影海报4"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至2集</div>
+                    <div class="movie-name">电影9</div>
+                    <div class="movie-rating">9.1</div>
+                </div>
+            </div>
+			<div class="movie-item">
+                <div class="movie-title"><img src="img/10.jpg" alt="电影海报4"></div>
+                <div class="movie-info">
+					<div class="movie-content1">更新至1集</div>
+                    <div class="movie-name">电影10</div>
+                    <div class="movie-rating">9.1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

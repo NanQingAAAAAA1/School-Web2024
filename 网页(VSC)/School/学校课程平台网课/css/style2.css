@@ -1,0 +1,36 @@
+.bestseller{
+	width:602px
+	margin 0 auto;
+}
+.bestseller p{
+	line-height: 30px;
+	text-indent: 2em;
+}
+.bestseller p em{
+	font-style:normal;
+	font-weight: bold;
+}
+.shouhou,.boss{
+	width: 602px;
+	margin: 0 auto;
+}
+.shouhou{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	font-weight: bold;
+}
+.boss h3{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+}
+.boss p{
+	font-size: italic;
+	line-height: 26px;
+	font-size: 14px;
+}
+.boss h3,.boss p{
+	text-indent: 2em;
+}

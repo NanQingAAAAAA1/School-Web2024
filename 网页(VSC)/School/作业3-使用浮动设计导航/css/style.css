@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+    background-color: #1C4BA9;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    background: #1C4BA9;
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#active {
+    color: none;
+}
+
+ul.submenu {
+    display: none;
+    text-align: center;
+    color: white;
+    width: 200px;
+    background: #1C4BA9;
+    position: absolute;
+    top: 40px;
+    right: 0%;
+    left: 0%;
+}
+
+.menu div li:hover .submenu {
+    display: block;
+}
+
+.input{
+    float:left;
+    width:100px;
+    height:20px;
+    outline:none;
+    border:none;
+}
+
+.button{
+	float:left;
+	width:96px;
+	height:20px;
+	color:white;
+	background-color:red;
+	border:none;
+	outline:none;
+}
+
+

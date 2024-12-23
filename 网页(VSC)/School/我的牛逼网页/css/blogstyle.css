@@ -1,0 +1,16 @@
+.big-h1 {  
+  font-size: 36px;
+  color = #2370cd
+}  
+  
+.small-h1 {  
+  font-size: 24px;
+  color = #000000
+}
+
+<style>
+div{ 
+white-space:nowrap; 
+} 
+</style>
+
