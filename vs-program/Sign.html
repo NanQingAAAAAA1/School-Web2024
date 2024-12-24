@@ -1,0 +1,122 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>简单的HTML示例</title>  
+    <style>
+        /* 
+        姓名；李圣炀
+        学号；239971319
+         */
+       h1{
+        text-align: center;
+       }
+        p{
+            color: red;
+            font-size: large;
+        }
+        
+        body{
+            background-image: url("img/bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align:center;
+        }
+        table{
+            width: 350px;
+            margin: auto;
+        }
+        
+        
+    </style>
+</head>  
+<body>
+      
+    <div class="div1" >  
+        <h1>学生信息注册</h1>
+        <hr>
+        <p>请注意:带*号的项目必须填写</p>
+        <form action="#" method="post">  
+        <table>
+            <tr>
+                <td>昵称:*</td>
+                <td><input type="text" name="nickname" placeholder="6~18个字符，由字母、数字或下画线构成" required></td>
+            </tr>
+            <tr>
+                <td>手机号:*</td>
+                <td><input type="tel" name="phonenumber" placeholder="输入11位数字" pattern="^\d{11}$"></td>
+            </tr>
+            <tr>
+                <td>姓名:*</td>
+                <td><input type="text" name="name" placeholder="输入真实的姓名，要求汉字"  required></td>
+            </tr>
+            <tr>
+                <td>性别:</td>
+                <td><input type="radio" name="gender" value="male" >男
+                    <input type="radio" name="gender" value="famale" >女
+                </td>
+            </tr>
+            <tr>
+                <td>年龄:</td>
+                <td>
+                    <input type="text" name="age" min="18" max="100" placeholder="年龄介于18到100"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>出身日期:</td>
+                <td>
+                    <input type="date" name="date" placeholder="1999/10/01">
+                </td>
+            </tr>
+            <tr>
+                <td>电子邮箱:</td>
+                <td>
+                    <input type="email" name="emailnumber" placeholder="susan@126.com">
+                </td>
+            </tr>
+            <tr>
+                <td>身份证号:*</td>
+                <td>
+                    <input type="text" name="id" >
+                </td>
+            </tr>
+            <tr>
+                <td>籍贯:</td>
+                <td>
+                    <input type="text" list="id_list" name="id_position">
+                    <datalist id="id_list">
+                        <option value="重庆"></option>
+                        <option value="北京"></option>
+                        <option value="上海"></option>
+                        <option value="广州"></option>
+                        <option value="深圳"></option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="music">音乐
+                    <input type="checkbox" name="hobby" value="internet">上网
+                    <input type="checkbox" name="hobby" value="movie">看电影
+                    <input type="checkbox" name="hobby" value="cheese">下棋
+                </td>
+            </tr>
+            <tr>
+                <td>你喜欢的颜色:</td>
+                <td>
+                    <input type="color" name="user_color" >
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+                <td><input type="reset" value="重置"></td>
+            </tr>
+        </table>  
+    </form>  
+    </div>
+    
+  
+</body>  
+</html>

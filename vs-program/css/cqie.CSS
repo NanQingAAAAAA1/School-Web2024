@@ -1,0 +1,71 @@
+/* 公共样式 */
+/* 姓名；李圣炀
+学号；239971319 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 取消下划线 */
+a{
+    text-decoration: none;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+ 
+.clearfix:after{
+    content: "";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    display: block;
+}
+.clear{
+    clear: both;
+}
+/* 设置导航栏 */
+nav{
+    height: 36px;
+    width: 100%;
+    background-color: rgb(29,81,149);
+}
+/* 设置导航栏宽度 */
+nav ul{
+    width: 1300px;
+    margin: 0 auto;
+}
+/* 一级标题宽度 */
+nav ul li{
+    width: 124px;
+    border-right: 1px #fff solid;
+    float: left;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+    height: 36px;
+}
+/* 一级标题里面的字体设置 */
+nav ul li a{
+    height: 36px;
+    color: #bbb;
+    font-size: 14px;
+    display: block;
+}
+/* 鼠标悬停时一级标题字体颜色和背景颜色 */
+nav ul li a:hover{
+    background-color: rgb(29,81,149);
+    color: #fff;
+}
+/* 隐藏二级标题 */
+ol{
+    display: none;
+}
+/* 二级标题颜色 */
+ul li ol li{
+    background-color:rgb(29,81,149) ;
+}
+/* 悬停时自动显示二级标题 */
+ul li:hover ol {
+    display: block;
+}

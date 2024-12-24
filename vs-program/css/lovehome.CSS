@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+/* 设置导航栏 */
+nav{
+   
+    height: 45px;
+    width: 100%;
+    background-color: white;
+}
+/* 设置导航栏宽度 */
+nav ul{
+    width: 1100px;
+    margin: 0 auto;
+   
+}
+/* 一级标题宽度 */
+nav ul li{
+    color: black;
+    width: 150px;
+    border-right: 1px #fff solid;
+    float: left;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+    height: 36px;
+    font-size: 16px;
+}
+/* 一级标题里面的字体设置 */
+nav ul li a{
+    color: black;
+    height: 36px;
+    font-size: 14px;
+    display: block;
+}
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+/* 隐藏二级标题 */
+ol{
+    display: none;
+}
+/* 二级标题颜色 */
+ul li ol li a:hover{
+    background-color:rgb(235, 203, 57) ;
+}
+/* 悬停时自动显示二级标题 */
+ul li:hover ol {
+    display: block;
+}
+input{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.bg{
+    margin-left: 150px;
+}
+.remen {
+    text-align: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 50px;
+}
+.left{
+    background-color: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+.left img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover; /* 确保图片不会变形 */
+}
+
+.left:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.shenghuo{
+   
+    background-color: #DBE7EF;
+    text-align: center;
+}
+.bottom{
+    height: 330px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #DBE7EF;
+    margin-bottom: 50px;
+}
+.bottom1{
+    background-color: #DBE7EF;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+   
+}
+.bottom1 img {
+    width: 200px;
+    height: 280px;
+    transition: transform 0.3s ease;
+}
+.bottom1:hover img {
+    transform: scale(1.1);
+}
+
+.bottom1:hover.news-title {
+    opacity: 1;
+}
+.bottom1:hover h2{
+    display: block;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.erweima{
+    position: absolute;
+    bottom: -96%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+}
+
+/* 新增的容器，用于包含标题和内容 */
+.news-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; /* 垂直排列标题和内容 */
+    justify-content: center; /* 垂直居中 */
+    align-items: left;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white;
+    overflow: hidden;
+    opacity: 0; /* 默认透明 */
+    transition: opacity 0.5s ease; /* 过渡效果 */
+}
+/* 鼠标悬停时显示内容 */
+.left:hover .news-overlay {
+    opacity: 1; /* 鼠标悬停时显示遮罩层 */
+    transform: scale(1.1); /* 鼠标悬停时放大1.1倍 */
+    transition: transform 0.5s ease; /* 过渡效果 */
+}
+
+.news-info:hover {
+    transform: scale(1.1); /* 鼠标悬停时放大1.1倍 */
+    transition: transform 0.5s ease; /* 过渡效果 */
+}
+
+.news-title, .news-content{
+    padding: 15px;
+}
+
+/* 标题和内容的个性化样式 */
+.news-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* 添加横线分隔 */
+    padding-bottom: 5px; /* 给标题和横线之间留空隙 */
+    display: flex;
+    justify-content: flex-start;/* 使用的是Flexbox布局，
+    使用justify-content属性来控制项目在主轴上的对齐方式*/
+}
+
+.news-content {
+    font-size: 1em;
+    color: #ddd; /* 调暗颜色 */
+    margin: 10px;
+}

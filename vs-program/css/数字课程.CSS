@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+}
+.container{
+    width: 800px;
+    height: 550px;
+    background-color: #f2f9fe;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0,0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.left{
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    width: 40%;
+    height: 100%;
+   background-repeat: no-repeat;
+   padding-top: 100px;
+   box-sizing: border-box;
+}
+.logo-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+}
+.logo-bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30%;
+}
+
+  

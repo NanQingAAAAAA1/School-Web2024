@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Animation Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   
+    .flip-button {
+    background-color: #514caf; /* 绿色背景 */
+    border: solid,2px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* 平滑的翻转过渡效果 */
+    backface-visibility: hidden; /* 防止翻转时背面内容可见 */
+    position:absolute;
+    left: 660px;
+    bottom: 400px;
+    border-radius: 5px;
+    
+}
+
+.flip-button:active {
+    transform: rotateX(70deg); /* 翻转180度 */
+}
+</style>
+<body>
+    <button class="flip-button">求你点我</button>
+</body>
+</html>

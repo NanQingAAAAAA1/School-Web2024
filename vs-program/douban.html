@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .container::after{
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+    }
+    .container div img{
+        float: left;
+        border-right: 20px #fff solid;
+        border-bottom: 10px #fff solid;
+        width: 120px;
+        margin-left: 150px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+        <div class="float_box"><img src="img/movie.png" alt=""></div>
+
+    </div>
+</body>
+</html>
