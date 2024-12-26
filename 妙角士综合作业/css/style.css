@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    z-index: -9999;
+    background-size: cover;  /* 确保背景图片填充整个页面 */
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.head{
+    width: 100%;
+}
+.top {
+    animation: fadeIn 1s ease-out forwards;
+}
+a{
+    text-decoration: none;
+}
+ul,ol,li{
+    list-style: none;
+}
+/* 设置导航栏 */
+nav{
+    text-align: center;
+    height: 36px;
+    width: 100%;
+    background-color: #451719;
+}
+/* 设置导航栏宽度 */
+nav ul{
+    width: 1300px;
+    margin: 0 auto;
+}
+/* 一级标题宽度 */
+nav ul li{
+    width: 124px;
+    /* border-right: 1px #fff solid; */
+    float: left;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+    height: 45px;
+    z-index: 9999;
+}
+nav ul li a{
+    height: 36px;
+    color: white;
+    font-size: 14px;
+    display: block;
+}
+/* 鼠标悬停时一级标题字体颜色和背景颜色 */
+nav ul li a:hover{
+    background-color: #E6C88F;
+    color: #fff;
+    z-index: 9999;
+}
+/* 隐藏二级标题 */
+ol{
+    display: none;
+}
+/* 二级标题颜色 */
+ul li ol li{
+    background-color: #E6C88F ;
+}
+/* 悬停时自动显示二级标题 */
+ul li:hover ol {
+    display: block;
+}
+/* 鼠标悬停在二级标题，标题字体颜色和背景颜色 */
+nav ul li ol li:hover{
+    background-color: #451719;
+    color: #fff;
+}
+.banner {
+    width: 100%;
+    height: auto;
+}
+.banner .bannerbg {
+    margin: 0;
+    padding: 0;
+    margin-top: -2%;
+    margin-left: 1%;
+}
+
+.banner .bannertext {
+    position: absolute;
+    float: left;
+    margin-left: 20%;
+    margin-top: -20%;
+    transform: translateX(-50%); /* 通过translateX修正居中偏移 */
+    z-index: 0;
+    overflow: hidden;
+    transform-origin: center; /* 设置缩放的中心点为左上角 */
+    transform: scale(0.92);
+    animation: scaleAnimation 3s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: translateX(-50%) scale(1); /* 初始状态，原始大小 */
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2); /* 结束状态，放大到1.2倍 */
+    }
+}
+
+.banner .bannercake {
+    margin-top: -19.5%;
+    float: right;
+    transform: translateX(-50%); /* 通过translateX修正居中偏移 */
+    z-index: -1;
+}
+
+.search {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    left: 200px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s; /* 延迟显示 */
+    padding-bottom: 10px; /* 盒子底部添加间距 */
+    margin-bottom: 15px; /* 或者用 margin-bottom 调整下方的空间 */
+    border-bottom: 2px solid #ccc; /* 下边框 */
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+.search__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #f4f2f2;
+    border: none;
+    color: #646464;
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    width: 300px;
+    transition: all ease-in-out.5s;
+    margin-right: -2rem;
+}
+    
+.search__input:hover,.search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+    
+.search__input:focus {
+    outline: none;
+    background-color: #f0eeee;
+}
+    
+.search__input::-webkit-input-placeholder {
+   font-weight: 50;
+}
+.text-hiden {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+.text-hide a {
+    color: #451719;
+    text-decoration: none;
+    margin-left: 20px; /* 根据需要调整间距 */
+}
+.introduce{
+    height: 210px;  
+    width: 75%;
+    margin-top: 80px;
+    margin-left: 200px;
+    border-radius: 10px;
+    display: flex;
+    object-fit: cover; /* 确保图片不会变形 */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+.introduce img {
+    border: "4px solid #451719";
+    opacity: 0;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.5s; /* 设置延迟 */
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.inside-image {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.inside-image.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.cake{
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+.cake:hover {
+    transform: scale(1.1); /* 悬停时放大图片 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+.center{
+    position: relative;
+    padding-top: 8px;
+    padding-left: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.center img {
+    width: 100%;
+    transition: transform 0.3s ease; /* 放大效果 */
+}
+.center:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+.center .inside-image {
+    transition: transform 0.3s ease; /* 放大效果 */
+}
+.center:hover .inside-image {
+    transform: scale(1.17);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+/* 滚动渐显效果 */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+}
+.scroll-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.inside-image{
+    background-color: #f9e7b2;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 225px ;
+    height: 30px;
+}
+.product-introduce{
+    float: left;
+    margin-left:220px ;
+    padding: 2px;
+}
+.support{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.left-arrow{
+    padding-top: 50px;
+  
+}
+.right-arrow{
+    padding-top: 50px;
+ 
+}
+.select{
+    width: 18%;
+    padding-left: 90px;
+    padding-bottom: 90px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    z-index: 9999;
+}
+.select p0 {
+    color: #451719;
+}
+.jieshaobg {
+    margin-top: 0px;
+    position: relative;
+    margin-left: 35px;
+    overflow: hidden;
+}
+
+.redbg {
+    width: 300px;
+    position: absolute;
+    margin-top: -320px;
+    margin-left: 300px;
+}
+
+.company-backgrand {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+    margin-top: -5%;
+    margin-left: -1%;
+    object-fit: cover; /* 确保图片不会变形 */
+}
+
+.company-backgrand .text1{
+    position: absolute;
+    margin-top: -380px;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    color: #451719;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+.company-backgrand .text2{
+    position: absolute;
+    margin-top: -300px;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+    animation: fadeInText 1s ease-out forwards;
+}
+
+.company-backgrand .text3{
+    position: absolute;
+    margin-top: -100px;
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 1;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #451719;
+    animation: fadeInText 1s ease-out forwards;
+}
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.left-detail{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+    /* margin-left: 120px; */
+    object-fit: cover; /* 确保图片不会变形 */
+}
+.left-detail:hover {
+    transform: scale(1.1); /* 悬停时放大图片 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+.display-detail{
+    margin: 0 auto;
+    width:75% ;
+    display: flex;
+    object-fit: cover; /* 确保图片不会变形 */
+    justify-content: center;
+   
+}
+.right-detail {
+    margin-left: 120px;
+    filter:  brightness(100%);
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+.right-detail:hover {
+    transform: scale(1.1); /* 悬停时放大图片 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+.l1{
+    width: 50%;
+    margin-left: 110px;
+}
+.l2{
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-right: 5px;
+    margin-left: 10px;
+}
+.final-four-cake{
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.final {
+    position: relative;
+    z-index: 1;
+}
+p1{
+    color: #441719;
+    font-weight: bold;
+}
+.f1{
+    width: 18%;
+    margin-left: 30px;
+}
+.double{
+    display: flex;
+    justify-content:center;
+    padding-top: 15px;
+    
+}
+
+.final {
+    padding: 5px;
+    border: 2px solid #ccc;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    position: relative; /* 使其成为定位上下文 */
+}
+
+.footer .footerbg img {
+    width: 100%; /* 保证底部背景图占满容器 */
+}
+
+.footer .miaojiaoshi {
+    float: left;
+    position: absolute; /* 使用绝对定位 */
+    z-index: 1; /* 让它位于其他元素之上 */
+    margin-top: -12%;
+    left: 15%; /* 根据需要调整位置 */
+}
+
+.footer .text {
+    position: absolute; /* 使用绝对定位 */
+    z-index: 1; /* 确保它位于其他元素之上 */
+    margin-top: -11%; /* 根据需求调整位置 */
+    margin-left: 27%;
+    color: #f0eeee;
+}
+.dibudaohang {
+    position: absolute; /* 使用绝对定位 */
+    z-index: 1; /* 确保它位于其他元素之上 */
+    margin-top: -2%; /* 根据需求调整位置 */
+    width: 100%;
+}
